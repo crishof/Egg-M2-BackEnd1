@@ -1,3 +1,8 @@
+import entidad.Producto;
+import servicio.ProductoServicio;
+
+import java.util.HashMap;
+
 //    Se necesita una aplicación para una tienda en la cual queremos almacenar los distintos
 //    productos que venderemos y el precio que tendrán. Además, se necesita que la
 //    aplicación cuente con las funciones básicas.
@@ -6,4 +11,18 @@
 //    Hashmap). El HashMap tendrá de llave el nombre del producto y de valor el precio.
 //    Realizar un menú para lograr todas las acciones previamente mencionadas.
 public class Main {
+
+    public static void main(String[] args) {
+
+        ProductoServicio ps = new ProductoServicio();
+
+        HashMap<String, Double > productos = new HashMap<String, Double>();
+
+        ps.cargarProductos(productos);
+        ps.mostrarProductos(productos);
+        ps.actualizarPrecios(productos);
+        ps.mostrarProductos(productos);
+        ps.borrarProducto(productos);
+        ps.mostrarProductos(productos);
+    }
 }

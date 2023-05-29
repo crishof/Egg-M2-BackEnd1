@@ -1,3 +1,7 @@
+import servicio.PaisServicio;
+
+import java.util.HashSet;
+
 //        Se requiere un programa que lea y guarde países, y para evitar que se ingresen repetidos
 //        usaremos un conjunto. El programa pedirá un país en un bucle, se guardará el país en el
 //        conjunto y después se le preguntará al usuario si quiere guardar otro país o si quiere salir,
@@ -10,4 +14,15 @@
 //        usuario y se mostrará el conjunto. Si el país no se encuentra en el conjunto se le informará
 //        al usuario.
 public class Main {
+    public static void main(String[] args) {
+
+        PaisServicio ps = new PaisServicio();
+        HashSet<String> paises = ps.ingresarPaises();
+        ps.mostrarPaises(paises);
+        ps.ordenarPaises(paises);
+        ps.buscarPais(paises);
+        ps.mostrarPaises(paises);
+
+    }
+
 }

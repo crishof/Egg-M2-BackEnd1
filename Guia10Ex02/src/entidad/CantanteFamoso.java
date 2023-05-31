@@ -1,5 +1,7 @@
 package entidad;
 
+import servicio.CantanteServicio;
+
 public class CantanteFamoso {
 
     private String nombre;

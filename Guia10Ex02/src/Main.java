@@ -1,3 +1,8 @@
+import entidad.CantanteFamoso;
+import servicio.CantanteServicio;
+
+import java.util.ArrayList;
+
 /*
 2. Crear una clase llamada CantanteFamoso. Esta clase guardará cantantes famosos y
 tendrá como atributos el nombre y discoConMasVentas.
@@ -15,6 +20,18 @@ cambios.
 public class Main {
 
     public static void main(String[] args) {
-        
+
+        ArrayList<CantanteFamoso> cantantes = new ArrayList<>();
+        CantanteServicio cs = new CantanteServicio();
+
+        cantantes.add(new CantanteFamoso("Charly Garcia","Unplugged"));
+        cantantes.add(new CantanteFamoso("Fito Paez","El amor despues del amor"));
+        cantantes.add(new CantanteFamoso("Los redondos","Oktubre"));
+        cantantes.add(new CantanteFamoso("U2","The Joshua tree"));
+        cantantes.add(new CantanteFamoso("Red hot","Californication"));
+
+        cs.mostrarLista(cantantes);
+        cs.menu(cantantes);
+
     }
 }

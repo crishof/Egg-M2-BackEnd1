@@ -3,6 +3,7 @@ package servicio;
 import entidad.CantanteFamoso;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class CantanteServicio {
@@ -20,6 +21,7 @@ public class CantanteServicio {
 
         int opcion;
         do {
+            System.out.println(" = = = MENU = = =");
         System.out.println("Ingrese la opcion deseada");
         System.out.println("1 para agregar un cantante");
         System.out.println("2 para mostrar todos los cantantes");
@@ -75,6 +77,16 @@ public class CantanteServicio {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         System.out.println("Ingrese el cantante que desea eliminar");
         String borrar = leer.next();
+
+        Iterator<CantanteFamoso> iterator = cantantes.iterator();
+
+        while (iterator.hasNext()){
+            CantanteFamoso singer = iterator.next();
+            if ( singer.getNombre().equalsIgnoreCase(borrar)){
+                iterator.remove();
+                break;
+            }
+        }
 
 
     }

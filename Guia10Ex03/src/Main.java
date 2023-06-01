@@ -1,8 +1,7 @@
 import entidad.Libro;
 import servicio.LibroServicio;
-
 import java.util.HashSet;
-import java.util.Objects;
+
 
 /*
 
@@ -48,7 +47,7 @@ public class Main {
 
         LibroServicio ls = new LibroServicio();
 
-        HashSet<Libro> libreria = new HashSet<Libro>();
+        var libreria = new HashSet<Libro>();
 
         ls.menu(libreria);
         ls.mostrarLibros(libreria);

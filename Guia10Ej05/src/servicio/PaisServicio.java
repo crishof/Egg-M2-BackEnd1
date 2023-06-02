@@ -1,5 +1,4 @@
 package servicio;
-
 import java.util.*;
 
 public class PaisServicio {
@@ -14,11 +13,9 @@ public class PaisServicio {
             paises.add(leer.next());
             System.out.println("Desea ingresar otro pais? digite S/N");
             check = leer.next();
-            if (!check.equalsIgnoreCase("S") && !check.equalsIgnoreCase("N")) {
-                do {
+            while (!check.equalsIgnoreCase("S") && !check.equalsIgnoreCase("N")) {
                     System.out.println("Opción incorrecta, reingrese");
                     check = leer.next();
-                } while (!check.equalsIgnoreCase("S") && !check.equalsIgnoreCase("N"));
             }
         } while (check.equalsIgnoreCase("S"));
 

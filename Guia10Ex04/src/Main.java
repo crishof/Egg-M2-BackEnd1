@@ -1,3 +1,7 @@
+import servicio.CiudadServicio;
+
+import java.util.HashMap;
+
 /*
 4. Almacena en un HashMap los códigos postales de 10 ciudades a elección de esta
 página: https://mapanet.eu/index.htm. Nota: Poner el código postal sin la letra, solo el
@@ -11,5 +15,25 @@ usuario.
 • Elimina 3 ciudades existentes dentro del HashMap.
  */
 public class Main {
+
+    public static void main(String[] args) {
+
+        CiudadServicio cs = new CiudadServicio();
+
+
+        HashMap<Integer, String> codigos = cs.cargarCodigosAutom();
+
+        cs.mostrarDatos(codigos);
+        cs.buscarCodigo(codigos);
+        cs.agregarCiudad(codigos);
+        cs.mostrarDatos(codigos);
+        cs.eliminarCiudades(codigos);
+        cs.mostrarDatos(codigos);
+
+
+
+
+
+    }
 
 }

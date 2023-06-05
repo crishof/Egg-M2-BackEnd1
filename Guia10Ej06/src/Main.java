@@ -1,6 +1,4 @@
-import entidad.Producto;
 import servicio.ProductoServicio;
-
 import java.util.HashMap;
 
 //    Se necesita una aplicación para una tienda en la cual queremos almacenar los distintos
@@ -16,7 +14,7 @@ public class Main {
 
         ProductoServicio ps = new ProductoServicio();
 
-        HashMap<String, Double > productos = new HashMap<String, Double>();
+        HashMap<String, Double > productos = new HashMap<>();
 
         ps.cargarProductos(productos);
         ps.mostrarProductos(productos);

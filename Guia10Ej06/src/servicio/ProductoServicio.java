@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ProductoServicio {
 
-    public void cargarProductos(HashMap productos) {
+    public void cargarProductos(HashMap<String,Double> productos) {
 
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
         String carga;
@@ -45,8 +45,8 @@ public class ProductoServicio {
 
     public void mostrarProductos(HashMap<String, Double> productos) {
 
-        for (Map.Entry<String, Double> entry : productos.entrySet()) {
-            System.out.println("Producto: " + entry.getKey() + "Precio: " + entry.getValue());
+        for (Map.Entry<String, Double> muestra : productos.entrySet()) {
+            System.out.println("Producto: " + muestra.getKey() + "Precio: " + muestra.getValue());
         }
     }
 }
